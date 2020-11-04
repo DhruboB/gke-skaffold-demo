@@ -1,0 +1,11 @@
+apiVersion: skaffold/v2beta8
+kind: Config
+metadata:
+  name: gkeapp
+build:
+  artifacts:
+  - image: gcr.io/wired-benefit-293406/demoapp
+deploy:
+  kubectl:
+    manifests:
+    - k8s-deployment.yml
